@@ -4,15 +4,15 @@ public class VendingMachineClient {
 	
 	public static void main(String[] args){
 		
-		VendingMachine vm = new VendingMachine(2000); //10000 ¿ø ³ÖÀ¸¸é¼­ ½ÃÀÛ
+		VendingMachine vm = new VendingMachine(2000); //10000ì›ì…ë ¥
 		
 		System.out.println(vm.getDrink(2));
 		
-		System.out.println("ÀÜ¾× ¹Ş±â : "+vm.getBanlance());
+		System.out.println("ì”ì•¡"+vm.getBanlance());
 		
 		System.out.println(vm.getDrink(2));
 		
-		vm = new VendingMachine(3000); //10000 ¿ø ³ÖÀ¸¸é¼­ ½ÃÀÛ
+		vm = new VendingMachine(3000); //3000ì›ì…ë ¥
 		
 		System.out.println(vm.getDrink(4));
 		

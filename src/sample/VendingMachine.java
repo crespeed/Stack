@@ -5,17 +5,17 @@ import java.util.Map;
 
 public class VendingMachine {
 	
-	private String drinks[] = {"Äİ¶ó","»çÀÌ´Ù","È¯Å¸"}; //À½·áÁ¾·ù
+	private String drinks[] = {"ì½œë¼","ì‚¬ì´ë‹¤","í™˜íƒ€"}; //ìŒë£Œìˆ˜ëª©ë¡
 	private String drink;
-	private int price; //À½·á±İ¾×
-	private int amt; //ÅõÀÔ±İ¾×
+	private int price; //ê°€ê²©
+	private int amt; //íˆ¬ì…ê¸ˆì•¡
 	
-	
+	 
 	VendingMachine(int amt){
 		this.amt = amt; 
 	}
 	
-	private boolean isEmpty(int num){ //ÇØ´çÀ½·á¼ö°¡ Á¸ÀçÇÏ´ÂÁö È®ÀÎ
+	private boolean isEmpty(int num){ //í•´ë‹¹ìŒë£Œìˆ˜ê°€ ìˆëŠ”ì§€ í™•ì¸ 
 		return drinks.length < num;
 	}
 	
@@ -23,7 +23,7 @@ public class VendingMachine {
 		return amt >= price;
 	}
 	
-	public String getDrink(int num){ //À½·á¸¦ ¼±ÅÂÇÏ¿© °¡Á®¿À´Â ±â´É
+	public String getDrink(int num){ //ìŒë£Œìˆ˜ ê°€ì ¸ì˜¤ê¸° 
 
 		if( isEmpty(num) ){
 			return "Drink get Fail";
@@ -31,29 +31,29 @@ public class VendingMachine {
 		
 		drink = drinks[num];
 		
-		if( drink == "Äİ¶ó" ){
+		if( drink == "ì½œë¼" ){
 			price = 1000;
-		}else if( drink == "»çÀÌ´Ù" ){
+		}else if( drink == "ì‚¬ì´ë‹¤" ){
 			price = 900;
-		}else if( drink == "È¯Å¸" ){
+		}else if( drink == "í™˜íƒ€" ){
 			price = 800;
 		} 
 		
 		if(!checkingBlance()){
-			System.out.println("ÀÜ¾×ºÎÁ·");
-			return "ÀÜ¾× : "+getBanlance();
+			System.out.println("ì”ì•¡ë¶€ì¡±");
+			return "ì”ì•¡: "+getBanlance();
 		}
 		amt = amt - price;
-		return drink+"¸¦ ¹Ş¾Ò´Ù.";
+		return drink+"ë¥¼ ë°›ëŠ”ë‹¤.";
 	}
 	
 	
-	public int getBanlance(){
+	public int getBanlance(){//í˜„ì¬ë‚¨ì•„ìˆëŠ” ì”ì•¡ì„ ê°€ì ¸ì˜¤ê³  ê¸ˆì•¡ 0ì›ìœ¼ë¡œ ì´ˆê¸°í™”
 		int temp = amt;
 		amt = 0;
 		return temp;
 	} 
-	//ÀÜ¾× °¡Á®¿À´Â ±â´É
+	
 	
 	
 	
