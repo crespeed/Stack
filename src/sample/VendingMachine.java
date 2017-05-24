@@ -11,7 +11,7 @@ public class VendingMachine {
 	private int amt; //투입금액
 	
 	 
-	VendingMachine(int amt){
+	VendingMachine(int amt){ 
 		this.amt = amt; 
 	}
 	

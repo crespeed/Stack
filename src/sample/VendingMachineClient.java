@@ -14,7 +14,7 @@ public class VendingMachineClient {
 		
 		vm = new VendingMachine(3000); //3000원입력
 		
-		System.out.println(vm.getDrink(4));
+		System.out.println(vm.getDrink(4));  
 		
 		System.out.println(vm.getDrink(0));
 		System.out.println(vm.getDrink(0));
